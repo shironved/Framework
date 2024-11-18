@@ -1,0 +1,19 @@
+# requirements.txt for LoRaWAN Security Framework
+
+# Standard library packages (no installation needed for these):
+# - collections
+# - secrets
+# - time
+# - base64
+# - json
+# - binascii
+# - argparse
+# - sys
+# - os
+# - subprocess
+
+# External packages needed for the framework:
+lorawanwrapper     # LoRaWAN-specific library for handling LoRa packet encryption and decryption (if available)
+
+# Additional package for managing large datasets, if needed:
+# lora-packet       # Optional: If also using a Node.js environment, this package is handled in `package.json`

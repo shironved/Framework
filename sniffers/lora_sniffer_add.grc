@@ -1,0 +1,1664 @@
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: test
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: bandwidth
+  id: variable
+  parameters:
+    comment: ''
+    value: '125000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [400, 12.0]
+    rotation: 0
+    state: true
+- name: channels
+  id: variable
+  parameters:
+    comment: ''
+    value: '[frequency]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 92.0]
+    rotation: 0
+    state: true
+- name: decode_downlink
+  id: variable
+  parameters:
+    comment: ''
+    value: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [168, 172.0]
+    rotation: 0
+    state: true
+- name: frequency
+  id: variable
+  parameters:
+    comment: ''
+    value: 868.4e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 12.0]
+    rotation: 0
+    state: true
+- name: low_pass_cutoff
+  id: variable
+  parameters:
+    comment: ''
+    value: bandwidth*0.9
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [504, 220.0]
+    rotation: 0
+    state: true
+- name: low_pass_trans_width
+  id: variable
+  parameters:
+    comment: ''
+    value: bandwidth*0.5
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 220.0]
+    rotation: 0
+    state: true
+- name: rpp0_channelization_disable
+  id: variable
+  parameters:
+    comment: "True  - removes low pass filter for the receiver blocks to see the whole\
+      \ spectrum. \n\t   - Might degrade a signal quality, but enables multiple-channel\
+      \ decoding"
+    value: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [544, 28.0]
+    rotation: 0
+    state: true
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '1000000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 20.0]
+    rotation: 0
+    state: enabled
+- name: spreading_factor
+  id: variable
+  parameters:
+    comment: ''
+    value: '7'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 124.0]
+    rotation: 0
+    state: true
+- name: squelch_treshold
+  id: variable
+  parameters:
+    comment: ''
+    value: '-60'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [112, 244.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 316.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_0
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1536, 476.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_1
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1512, 940.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_2
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 636.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_3
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1520, 780.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_4
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1520, 1108.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_5
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 1620.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_6
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1504, 1284.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_7
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 1452.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_8
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1544, 1796.0]
+    rotation: 0
+    state: true
+- name: analog_simple_squelch_cc_0_0_9
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: '1'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_treshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1552, 1972.0]
+    rotation: 0
+    state: true
+- name: blocks_add_xx_0
+  id: blocks_add_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '11'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2024, 712.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '867.1'
+    freq: +900e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 324.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '867.3'
+    freq: +700e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 460.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '867.5'
+    freq: +500e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 636.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '867.7'
+    freq: +300e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 780.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_0_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.0'
+    freq: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 1116.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_0_1
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '867.9'
+    freq: +100e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [912, 940.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_0_1_0
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.1'
+    freq: -100e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 1300.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_0_2
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.3'
+    freq: -300e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 1468.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_0_1
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.5'
+    freq: -500e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 1620.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_0_1
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.7'
+    freq: -700e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 1804.0]
+    rotation: 0
+    state: enabled
+- name: blocks_freqshift_cc_0_1
+  id: blocks_freqshift_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: '868.9'
+    freq: -900e3
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 1980.0]
+    rotation: 0
+    state: enabled
+- name: lora_lora_receiver_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [864, 500.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: 'False'
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: '8'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 1268.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: 'False'
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: '9'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 1356.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_0_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: 'False'
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: '10'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 1404.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_0_0_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: 'False'
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '13'
+    minoutbuf: '13'
+    reduced_rate: 'True'
+    samp_rate: samp_rate
+    sf: '11'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [24, 1468.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_0_0_0_0_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: 'False'
+    cr: '4'
+    crc: 'False'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'True'
+    samp_rate: samp_rate
+    sf: '12'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [48, 1476.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_1
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 828.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_1_1
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 948.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_1_2
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 1084.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_1_3
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 1212.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_1_4
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 1348.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_2
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [904, 716.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_3
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [888, 620.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_4
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 396.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_4_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 292.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_4_1
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [856, 188.0]
+    rotation: 0
+    state: disabled
+- name: lora_lora_receiver_0_0_4_1_0
+  id: lora_lora_receiver
+  parameters:
+    affinity: ''
+    alias: ''
+    bandwidth: bandwidth
+    center_freq: frequency
+    channel_list: channels
+    comment: ''
+    conj: decode_downlink
+    cr: '4'
+    crc: 'True'
+    decimation: '1'
+    disable_channelization: rpp0_channelization_disable
+    disable_drift_correction: 'False'
+    implicit: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    reduced_rate: 'False'
+    samp_rate: samp_rate
+    sf: spreading_factor
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2264, 804.0]
+    rotation: 0
+    state: enabled
+- name: lora_message_socket_sink_0
+  id: lora_message_socket_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ip: 127.0.0.1
+    layer: '1'
+    port: '7890'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [176, 1236.0]
+    rotation: 0
+    state: disabled
+- name: lora_message_socket_sink_1
+  id: lora_message_socket_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ip: 127.0.0.1
+    layer: '0'
+    port: '40868'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2552, 780.0]
+    rotation: 0
+    state: true
+- name: lora_rx_1
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '11'
+    soft_decoding: 'False'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [248, 1668.0]
+    rotation: 0
+    state: disabled
+- name: lora_rx_1_0
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '12'
+    soft_decoding: 'True'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [264, 1700.0]
+    rotation: 0
+    state: disabled
+- name: lora_rx_1_1
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '7'
+    soft_decoding: 'False'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 1564.0]
+    rotation: 0
+    state: disabled
+- name: lora_rx_1_1_0
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '8'
+    soft_decoding: 'False'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1596.0]
+    rotation: 0
+    state: disabled
+- name: lora_rx_1_1_1
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '9'
+    soft_decoding: 'False'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [232, 1620.0]
+    rotation: 0
+    state: disabled
+- name: lora_rx_1_1_1_0
+  id: lora_rx
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: bandwidth
+    comment: ''
+    cr: '1'
+    has_crc: 'True'
+    impl_head: 'False'
+    ldro: '2'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    pay_len: '255'
+    print_rx: '[True,True]'
+    samp_rate: samp_rate
+    sf: '10'
+    soft_decoding: 'False'
+    sync_word: '[0x12]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1660.0]
+    rotation: 0
+    state: disabled
+- name: low_pass_filter_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1244.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1916.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_1
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1748.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_2
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1580.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_3
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1412.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_4
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 1068.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_4_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 588.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_4_0_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240, 436.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_4_0_0_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1240, 276.0]
+    rotation: 0
+    state: enabled
+- name: low_pass_filter_0_4_1
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1248, 892.0]
+    rotation: 0
+    state: true
+- name: low_pass_filter_0_4_2
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: low_pass_cutoff
+    decim: '1'
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fir_filter_ccf
+    width: low_pass_trans_width
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 756.0]
+    rotation: 0
+    state: true
+- name: note_0
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: export PYTHONPATH=/usr/local/lib/3.10/dist-packages:/usr/lib/3.10/site-packages:$PYTHONPATH
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 4.0]
+    rotation: 0
+    state: enabled
+- name: note_1
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 68.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_sink_x_0_0
+  id: qtgui_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: samp_rate
+    comment: ''
+    fc: frequency
+    fftsize: '1024'
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    plotconst: 'True'
+    plotfreq: 'True'
+    plottime: 'True'
+    plotwaterfall: 'True'
+    rate: '10'
+    showports: 'False'
+    showrf: 'False'
+    type: complex
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1040, 1004.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_sink_x_0_0_0
+  id: qtgui_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    bw: samp_rate
+    comment: ''
+    fc: frequency
+    fftsize: '1024'
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    plotconst: 'True'
+    plotfreq: 'True'
+    plottime: 'True'
+    plotwaterfall: 'True'
+    rate: '10'
+    showports: 'False'
+    showrf: 'False'
+    type: complex
+    wintype: window.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [456, 608.0]
+    rotation: 0
+    state: enabled
+- name: soapy_hackrf_source_0
+  id: soapy_hackrf_source
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: 'False'
+    bandwidth: '0'
+    center_freq: frequency
+    comment: ''
+    dev_args: ''
+    gain: '16'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: samp_rate
+    type: fc32
+    vga: '16'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 1148.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_simple_squelch_cc_0_0, '0', blocks_add_xx_0, '0']
+- [analog_simple_squelch_cc_0_0_0, '0', blocks_add_xx_0, '1']
+- [analog_simple_squelch_cc_0_0_1, '0', blocks_add_xx_0, '4']
+- [analog_simple_squelch_cc_0_0_2, '0', blocks_add_xx_0, '2']
+- [analog_simple_squelch_cc_0_0_3, '0', blocks_add_xx_0, '3']
+- [analog_simple_squelch_cc_0_0_4, '0', blocks_add_xx_0, '5']
+- [analog_simple_squelch_cc_0_0_5, '0', blocks_add_xx_0, '8']
+- [analog_simple_squelch_cc_0_0_6, '0', blocks_add_xx_0, '6']
+- [analog_simple_squelch_cc_0_0_7, '0', blocks_add_xx_0, '7']
+- [analog_simple_squelch_cc_0_0_8, '0', blocks_add_xx_0, '9']
+- [analog_simple_squelch_cc_0_0_9, '0', blocks_add_xx_0, '10']
+- [blocks_add_xx_0, '0', lora_lora_receiver_0_0_4_1_0, '0']
+- [blocks_freqshift_cc_0, '0', lora_lora_receiver_0_0_4_1, '0']
+- [blocks_freqshift_cc_0, '0', low_pass_filter_0_4_0_0_0, '0']
+- [blocks_freqshift_cc_0_0, '0', lora_lora_receiver_0_0_4_0, '0']
+- [blocks_freqshift_cc_0_0, '0', low_pass_filter_0_4_0_0, '0']
+- [blocks_freqshift_cc_0_0_0, '0', lora_lora_receiver_0_0_4, '0']
+- [blocks_freqshift_cc_0_0_0, '0', low_pass_filter_0_4_0, '0']
+- [blocks_freqshift_cc_0_0_0_0, '0', lora_lora_receiver_0_0, '0']
+- [blocks_freqshift_cc_0_0_0_0, '0', low_pass_filter_0_4_2, '0']
+- [blocks_freqshift_cc_0_0_0_0_0, '0', lora_lora_receiver_0_0_2, '0']
+- [blocks_freqshift_cc_0_0_0_0_0, '0', low_pass_filter_0_4, '0']
+- [blocks_freqshift_cc_0_0_0_0_1, '0', low_pass_filter_0_4_1, '0']
+- [blocks_freqshift_cc_0_0_0_0_1, '0', qtgui_sink_x_0_0, '0']
+- [blocks_freqshift_cc_0_0_0_0_1_0, '0', lora_lora_receiver_0_0_1, '0']
+- [blocks_freqshift_cc_0_0_0_0_1_0, '0', low_pass_filter_0, '0']
+- [blocks_freqshift_cc_0_0_0_0_2, '0', lora_lora_receiver_0_0_1_1, '0']
+- [blocks_freqshift_cc_0_0_0_0_2, '0', low_pass_filter_0_3, '0']
+- [blocks_freqshift_cc_0_0_0_1, '0', lora_lora_receiver_0_0_1_2, '0']
+- [blocks_freqshift_cc_0_0_0_1, '0', low_pass_filter_0_2, '0']
+- [blocks_freqshift_cc_0_0_1, '0', lora_lora_receiver_0_0_1_3, '0']
+- [blocks_freqshift_cc_0_0_1, '0', low_pass_filter_0_1, '0']
+- [blocks_freqshift_cc_0_1, '0', lora_lora_receiver_0_0_1_4, '0']
+- [blocks_freqshift_cc_0_1, '0', low_pass_filter_0_0, '0']
+- [lora_lora_receiver_0_0, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_0, frames, lora_message_socket_sink_0, in]
+- [lora_lora_receiver_0_0_0_0, frames, lora_message_socket_sink_0, in]
+- [lora_lora_receiver_0_0_0_0_0, frames, lora_message_socket_sink_0, in]
+- [lora_lora_receiver_0_0_0_0_0_0, frames, lora_message_socket_sink_0, in]
+- [lora_lora_receiver_0_0_0_0_0_0_0, frames, lora_message_socket_sink_0, in]
+- [lora_lora_receiver_0_0_1, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_1_1, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_1_2, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_1_3, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_1_4, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_2, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_3, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_4, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_4_0, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_4_1, frames, lora_message_socket_sink_1, in]
+- [lora_lora_receiver_0_0_4_1_0, frames, lora_message_socket_sink_1, in]
+- [low_pass_filter_0, '0', analog_simple_squelch_cc_0_0_6, '0']
+- [low_pass_filter_0_0, '0', analog_simple_squelch_cc_0_0_9, '0']
+- [low_pass_filter_0_1, '0', analog_simple_squelch_cc_0_0_8, '0']
+- [low_pass_filter_0_2, '0', analog_simple_squelch_cc_0_0_5, '0']
+- [low_pass_filter_0_3, '0', analog_simple_squelch_cc_0_0_7, '0']
+- [low_pass_filter_0_4, '0', analog_simple_squelch_cc_0_0_4, '0']
+- [low_pass_filter_0_4_0, '0', analog_simple_squelch_cc_0_0_2, '0']
+- [low_pass_filter_0_4_0_0, '0', analog_simple_squelch_cc_0_0_0, '0']
+- [low_pass_filter_0_4_0_0_0, '0', analog_simple_squelch_cc_0_0, '0']
+- [low_pass_filter_0_4_1, '0', analog_simple_squelch_cc_0_0_1, '0']
+- [low_pass_filter_0_4_2, '0', analog_simple_squelch_cc_0_0_3, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_0_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_0_1, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_0_1_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_0_2, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_0_1, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_0_1, '0']
+- [soapy_hackrf_source_0, '0', blocks_freqshift_cc_0_1, '0']
+- [soapy_hackrf_source_0, '0', qtgui_sink_x_0_0_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.10.0
