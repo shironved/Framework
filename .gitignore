@@ -5,12 +5,7 @@ __pycache__/
 # Ignore Node.js dependencies
 node_modules/
 
-# Ignore macOS-specific files
-.DS_Store
-
-# Ignore log files
+# Ignore large or unnecessary files
 logs/
-
-# Ignore virtual environment folders
-venv/
-.env/
+*.bin
+packetfrm.*
