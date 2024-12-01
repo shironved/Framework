@@ -96,3 +96,12 @@ Framework/
 │   └── packetcon.py         # Packet conversion script
 └── node_modules/            # Node.js dependencies (if applicable)
 
+References 
+Im kindly thanking every resource that i gathered with help of online availability and make changes to my framework and this framework will be continued near future when more methodology will be found 
+
+1. penhertz (https://penthertz.com/blog/testing-LoRa-with-SDR-and-handy-tools.html)
+2. LAF framework (https://github.com/IOActive/laf)
+3. gr lora package (https://github.com/rpp0/gr-lora)
+4. anthonykirby lora-packet (https://github.com/anthonykirby/lora-packet)
+5. great scott gadgets (https://greatscottgadgets.com/sdr/1/)
+   
